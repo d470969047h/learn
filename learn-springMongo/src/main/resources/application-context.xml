@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context-3.2.xsd
+          http://www.springframework.org/schema/aop
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+          http://mybatis.org/schema/mybatis-spring
+          http://mybatis.org/schema/mybatis-spring.xsd"
+       default-autowire="byName">
+    <!--隐式地向 Spring容器注册,激活那些已经在spring容器里注册过的bean
+    http://www.cnblogs.com/leiOOlei/p/3713989.html
+    -->
+    <context:annotation-config/>
+    <!--spring aop-->
+    <aop:aspectj-autoproxy/>
+
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+
+    <!--阿里巴巴druid缓冲池添加-start-->
+<!--    <bean id= "dataSource" class = "com.alibaba.druid.pool.DruidDataSource" init-method ="init" destroy-method= "close" >
+       <!&ndash; 基本属性 url、user、password &ndash;>
+        <property name= "url" value ="${jdbc_url}" />
+        <property name= "username" value ="${jdbc_username}" />
+        <property name= "password" value ="${jdbc_password}" />
+
+       <!&ndash; 配置初始化大小、最小、最大 &ndash;>
+        <property name= "initialSize" value ="1" />
+        <property name= "minIdle" value ="1" />
+        <property name= "maxActive" value ="20" />
+
+       <!&ndash; 配置获取连接等待超时的时间 &ndash;>
+        <property name= "maxWait" value ="60000" />
+
+       <!&ndash; 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 &ndash;>
+        <property name= "timeBetweenEvictionRunsMillis" value = "60000" />
+
+       <!&ndash; 配置一个连接在池中最小生存的时间，单位是毫秒 &ndash;>
+        <property name= "minEvictableIdleTimeMillis" value = "300000" />
+
+        <property name= "validationQuery" value ="SELECT 'x'" />
+        <property name= "testWhileIdle" value ="true" />
+        <property name= "testOnBorrow" value ="false" />
+        <property name= "testOnReturn" value ="false" />
+
+       <!&ndash; 打开PSCache，并且指定每个连接上PSCache的大小 &ndash;>
+        <property name= "poolPreparedStatements" value = "true" />
+        <property name= "maxPoolPreparedStatementPerConnectionSize" value ="20" />
+
+       <!&ndash; 配置监控统计拦截的filters，去掉后监控界面 sql无法统计 &ndash;>
+        <property name= "filters" value ="stat" />
+    </bean>-->
+    <!--阿里巴巴druid缓冲池添加-end-->
+
+    <bean id="dataSource" destroy-method="close"
+          class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${jdbc_driverClassName}" />
+        <property name="url" value="${jdbc_url}" />
+        <property name="username" value="${jdbc_username}" />
+        <property name="password" value="${jdbc_password}" />
+        <!--<property name="validationQuery" value="select 1"></property>-->
+        <property name="validationQuery" value="select sysdate from dual"> </property>
+        <property name="initialSize" value="10"/>
+        <!--maxActive: 最大连接数量 0代表无限制-->
+        <property name="maxActive" value="2000"/>
+        <!--maxIdle: 最大空闲连接-->
+        <property name="maxIdle" value="200"/>
+        <!--minIdle: 最小空闲连接-->
+        <property name="minIdle" value="5"/>
+
+        <property name="testWhileIdle" value="true"/>
+        <!--maxWait: 超时等待时间以毫秒为单位 1000等于60秒-->
+        <property name="maxWait" value="1000"/>
+    </bean>
+
+
+    <!--
+     define the SqlSessionFactory, notice that configLocation is not needed when you use MapperFactoryBean
+    -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+    <!--mybatis扫描的包-->
+    <mybatis:scan base-package="com.daihui.mapper"/>
+
+    <!--start of log4jdbc,SQL调试日志框架-->
+    <bean id="log4jdbcInterceptor" class="net.sf.log4jdbc.DataSourceSpyInterceptor"/>
+    <bean id="dataSourceLog4jdbcAutoProxyCreator"
+          class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="interceptorNames">
+            <list>
+                <value>log4jdbcInterceptor</value>
+            </list>
+        </property>
+        <property name="beanNames">
+            <list>
+                <value>dataSource</value>
+            </list>
+        </property>
+    </bean>
+    <!--end of log4jdbc,SQL调试日志框架-->
+
+    <!-- transaction manager, use JtaTransactionManager for global tx -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 自动扫描组件，需要把controller去掉，否则影响事务管理 -->
+    <context:component-scan base-package="com.daihui">
+        <context:exclude-filter type="regex" expression="com.huaru.controller.*"/>
+    </context:component-scan>
+
+   <!-- 导入mongodb的配置文件 -->
+   <!--<import resource="mongodb-context.xml"/>-->
+
+    <bean id="myBean" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesMode" value="2" />
+        <property name="ignoreResourceNotFound" value="true" />
+        <property name="locations"><list>
+            <value>classpath:mongodb-context.xml</value>
+        </list></property>
+        <!--<property name="properties"><props>-->
+            <!--<prop key="aProperty">value</prop>-->
+        <!--</props></property>-->
+    </bean>
+</beans>
+
+

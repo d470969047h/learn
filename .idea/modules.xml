@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/learn.iml" filepath="$PROJECT_DIR$/learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-rpc/learn-rpc.iml" filepath="$PROJECT_DIR$/learn-rpc/learn-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-springMongo/learn-springMongo.iml" filepath="$PROJECT_DIR$/learn-springMongo/learn-springMongo.iml" />
+    </modules>
+  </component>
+</project>
