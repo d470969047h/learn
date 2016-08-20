@@ -14,11 +14,19 @@
     <title>上传</title>
 </head>
 <body>
-<p>文件上传</p>
+<b/>
+<p>spring文件上传</p>
 <div>
-    <form action="${ctx}/upload/springUpload?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
-        <p>Icon</p>
-        <input type="file" name = "file"/>
+    <form id="springUploadForm" action="${ctx}/upload/springUpload" method="post" enctype="multipart/form-data">
+        <p>Icon:<input type="file" name = "file"/></p>
+        <input type="submit" value="Submit" />
+    </form>
+</div><b/>
+
+<p>spring-data-mongo文件上传</p>
+<div>
+    <form id="mongoUploadForm" action="${ctx}/upload/mongoUpload" method="post" enctype="multipart/form-data">
+        <p>Icon:<input type="file" name = "file"/></p>
         <input type="submit" value="Submit" />
     </form>
 </div>

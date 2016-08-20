@@ -42,11 +42,9 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/learn-redis" />
+    <file type="web" url="file://$PROJECT_DIR$/learn-mongodb" />
     <file type="web" url="file://$PROJECT_DIR$/learn-rpc" />
     <file type="web" url="file://$PROJECT_DIR$/learn-springMongo" />
-    <file type="web" url="file://$PROJECT_DIR$/learn-test" />
-    <file type="web" url="file://$PROJECT_DIR$/learn-test2" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -57,29 +55,11 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/learn-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/learn-scala/pom.xml" />
         <option value="$PROJECT_DIR$/learn-test/pom.xml" />
         <option value="$PROJECT_DIR$/learn-test2/pom.xml" />
       </set>
     </option>
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Serialization issues</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>SerializableHasSerialVersionUIDField</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -97,7 +77,7 @@
     <ConfirmationsSetting value="0" id="添加" />
     <ConfirmationsSetting value="0" id="移除" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

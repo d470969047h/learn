@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="learn-mongodb:war">
+    <output-path>$PROJECT_DIR$/learn-mongodb/target</output-path>
+    <root id="archive" name="learn-mongodb.war">
+      <element id="artifact" artifact-name="learn-mongodb:war exploded" />
+    </root>
+  </artifact>
+</component>

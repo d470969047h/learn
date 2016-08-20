@@ -11,6 +11,10 @@
     <modules>
         <module>learn-rpc</module>
         <module>learn-springMongo</module>
+        <module>learn-mongodb</module>
+        <module>learn-scala</module>
+        <module>learn-scala</module>
+        <module>learn-scala</module>
     </modules>
 
 

@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="learn-scala:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/learn_scala_jar</output-path>
+    <root id="archive" name="learn-scala.jar">
+      <element id="extracted-dir" path="D:/scala/lib/scala-actors-migration.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/scala/lib/scala-actors.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/scala/lib/scala-library.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/scala/lib/scala-reflect.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/scala/lib/scala-swing.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
