@@ -21,5 +21,5 @@ StatePatternDemo，我们的演示类使用 Context 和状态对象来演示 Con
 
 
 _[本例子来源于菜鸟教程](http://www.runoob.com/design-pattern/state-pattern.html "本例子来源于菜鸟教程")_
-<a href="http://www.runoob.com/design-pattern/state-pattern.html">本例子来源于菜鸟教程</a>
+
 
