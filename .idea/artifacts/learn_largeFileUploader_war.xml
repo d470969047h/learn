@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="learn-largeFileUploader:war">
-    <output-path>$PROJECT_DIR$/learn-largeFileUploader/target</output-path>
-    <root id="archive" name="learn-largeFileUploader.war">
-      <element id="artifact" artifact-name="learn-largeFileUploader:war exploded" />
-    </root>
-  </artifact>
-</component>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-4.1.xsd
+           http://www.springframework.org/schema/mvc
+           http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+
+    <!-- 配置自动扫描controller所在的package -->
+    <context:component-scan base-package="com.daihui.controller"/>
+
+    <!--自定义的日期与时间转换服务类-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.daihui.framework.convert.CustomDateConverter"/>
+                <bean class="com.daihui.framework.convert.CustomTimestampConverter"/>
+            </set>
+        </property>
+    </bean>
+
+    <!-- 主要作用于@Controller，激活该模式 下面是一种简写形式，完全可以手动配置替代这种简写形式；
+    它会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter
+        两个bean, 是spring MVC为@Controllers分发请求所必须的-->
+    <mvc:annotation-driven conversion-service="conversionService" validator="validator"/>
+
+    <!--缺省的类型转换错误提示消息资源文件-->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="WEB-INF/classes/messages"/>
+        <property name="fileEncodings" value="utf-8"/>
+        <property name="cacheSeconds" value="-1"/>
+        <!-- never reload-->
+        <property name="useCodeAsDefaultMessage" value="true"/>
+    </bean>
+
+    <!-- JSR303 Validator定义,数据校验-->
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+        <property name="validationMessageSource" ref="messageSource"/>
+    </bean>
+
+    <!-- Declare the Interceptor -->
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="locale"/>
+    </mvc:interceptors>
+    <!-- Declare the Resolver -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
+
+
+    <!-- 配置js，css等静态文件直接映射到对应的文件夹，不被DispatcherServlet处理 mapping to WebRoot里面的静态文件位置目录
+        location 访问地址 -->
+    <!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理，3.04新增功能，需要重新设置spring-mvc-3.0.xsd -->
+    <mvc:resources mapping="/images/**" location="/images/"/>
+    <mvc:resources mapping="/js/**" location="/js/"/>
+    <mvc:resources mapping="/css/**" location="/css/"/>
+    <mvc:resources mapping="/html/**" location="/html/"/>
+    <mvc:resources mapping="/upload/**" location="/upload/"/>
+
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <bean class="com.daihui.framework.interceptor.CheckLoginInterceptor"/>
+    </mvc:interceptors>
+
+
+    <!-- jsp页面解析器，当Controller返回XXX字符串时，先通过拦截器，然后该类就会在/WEB-INF/views/目录下，查找XXX.jsp文件 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/"> </property>
+        <property name="suffix" value=".jsp"> </property>
+    </bean>
+
+    <!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 指定所上传文件的总大小不能超过20M。注意maxUploadSize属性的限制不是针对单个文件，而是所有文件的容量之和 -->
+        <property name="maxUploadSize" value="20480000"/>
+    </bean>
+
+    <!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->
+    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/views/error_fileupload.jsp页面 -->
+                <prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">error_fileupload</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

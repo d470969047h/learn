@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="learn-rpc:war">
-    <output-path>$PROJECT_DIR$/learn-rpc/target</output-path>
-    <root id="archive" name="learn-rpc.war">
-      <element id="artifact" artifact-name="learn-rpc:war exploded" />
-    </root>
-  </artifact>
-</component>

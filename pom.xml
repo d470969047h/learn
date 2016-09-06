@@ -9,12 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>learn-rpc</module>
-        <module>learn-springMongo</module>
-        <module>learn-mongodb</module>
         <!--<module>learn-scala</module>-->
-        <module>learn-designPattern</module>
+        <!--<module>learn-springMongo</module>-->
+        <!--<module>learn-designPattern</module>-->
         <module>learn-largeFileUploader</module>
+
     </modules>
 
 
