@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="learn-designPattern" />
+        <module name="learn-largeFileUploader" />
         <module name="learn-mongodb" />
         <module name="learn-rpc" />
         <module name="learn-scala" />
@@ -32,6 +33,7 @@
     <bytecodeTargetLevel target="1.8">
       <module name="learn" target="1.5" />
       <module name="learn-designPattern" target="1.5" />
+      <module name="learn-largeFileUploader" target="1.5" />
       <module name="learn-mongodb" target="1.5" />
       <module name="learn-rpc" target="1.5" />
       <module name="learn-springMongo" target="1.5" />

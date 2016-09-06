@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="learn-largeFileUploader:war exploded">
+    <output-path>$PROJECT_DIR$/learn-largeFileUploader/target/learn-largeFileUploader</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="learn-largeFileUploader" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/learn-largeFileUploader/target/learn-largeFileUploader/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="learn-largeFileUploader/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/learn.iml" filepath="$PROJECT_DIR$/learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-designPattern/learn-designPattern.iml" filepath="$PROJECT_DIR$/learn-designPattern/learn-designPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-largeFileUploader/learn-largeFileUploader.iml" filepath="$PROJECT_DIR$/learn-largeFileUploader/learn-largeFileUploader.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-mongodb/learn-mongodb.iml" filepath="$PROJECT_DIR$/learn-mongodb/learn-mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-rpc/learn-rpc.iml" filepath="$PROJECT_DIR$/learn-rpc/learn-rpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-scala/learn-scala.iml" filepath="$PROJECT_DIR$/learn-scala/learn-scala.iml" />

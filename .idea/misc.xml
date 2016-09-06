@@ -42,6 +42,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/learn-largeFileUploader" />
     <file type="web" url="file://$PROJECT_DIR$/learn-mongodb" />
     <file type="web" url="file://$PROJECT_DIR$/learn-rpc" />
     <file type="web" url="file://$PROJECT_DIR$/learn-springMongo" />
@@ -54,6 +55,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/learn-largeFileUploader/pom.xml" />
         <option value="$PROJECT_DIR$/learn-redis/pom.xml" />
         <option value="$PROJECT_DIR$/learn-scala/pom.xml" />
         <option value="$PROJECT_DIR$/learn-test/pom.xml" />
