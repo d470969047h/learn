@@ -11,22 +11,22 @@ object UseTraitAop  extends App {
 
   //继承测试1
   //trait中可以写具体实现方法，trait可以按照java中接口和抽象类的结合体去理解
-/*   val teacher1 = new PianoTeacher
+  val teacher1 = new PianoTeacher
    teacher1.playPiano()
-   teacher1.teach()*/
+   teacher1.teach()
   //继承测试2
   //trait中的抽象方法必须得实现
-/*  val teacher2 = new Human with TTeacher with PianoPlayer {
+ val teacher2 = new Human with TTeacher with PianoPlayer {
     override def teach() = {
       println("I'm teaching students !")
     }
   }
   teacher2.playPiano()
-  teacher2.teach()*/
+  teacher2.teach()
 
   //AOP(切片)测试
-  val worker = new Work with TBeforeAfter
-  worker.doAction()
+  //val worker = new Work with TBeforeAfter
+  //worker.doAction()
 
 
 

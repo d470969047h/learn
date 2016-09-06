@@ -22,6 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="learn-designPattern" />
         <module name="learn-mongodb" />
         <module name="learn-rpc" />
         <module name="learn-scala" />
@@ -30,9 +31,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="learn" target="1.5" />
+      <module name="learn-designPattern" target="1.5" />
       <module name="learn-mongodb" target="1.5" />
       <module name="learn-rpc" target="1.5" />
-      <module name="learn-scala" target="1.5" />
       <module name="learn-springMongo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
