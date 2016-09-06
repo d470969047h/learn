@@ -19,7 +19,6 @@ __注意事项__：在行为受状态约束的时候使用状态模式，而且�
 StatePatternDemo，我们的演示类使用 Context 和状态对象来演示 Context 在状态改变时的行为变化。
 ![状态模式的 UML 图](https://github.com/d470969047h/learn/blob/master/learn-designPattern/src/main/java/com/daihui/state/resources/state_pattern_uml_diagram.jpg)
 
-
 _[本例子来源于菜鸟教程](http://www.runoob.com/design-pattern/state-pattern.html "本例子来源于菜鸟教程")_
 
 
