@@ -9,6 +9,7 @@
 
 * 对接口编程而不是对实现编程。
 * 优先使用对象组合而不是继承。
+
 ---
 ### 设计模式的使用
 设计模式在软件开发中的两个主要用途。
@@ -19,9 +20,8 @@
 
 ---
 ### 设计模式的类型
-根据设计模式的参考书 **Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素）** 中所提到的，总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE 设计模式。
-
-
+根据设计模式的参考书 **Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素）** 中所提到的，总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE 设计模式。       
+      
 |序号|模式&描述|包括|
 |-|-|-|
 |1|**创建型模式**    这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用新的运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。 |工厂模式（Factory Pattern）抽象工厂模式（Abstract Factory Pattern）  单例模式（Singleton Pattern）  建造者模式（Builder Pattern）   原型模式（Prototype Pattern）|
