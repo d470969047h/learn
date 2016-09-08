@@ -26,7 +26,7 @@
 <table class="table table-bordered table-striped table-condensed">
 <tr>
   <th>序号</th>
-  <th width="400px">模式&描述</th>
+  <th width="450px">模式&描述</th>
   <th>包括</th>
 </tr>
 <tr>
