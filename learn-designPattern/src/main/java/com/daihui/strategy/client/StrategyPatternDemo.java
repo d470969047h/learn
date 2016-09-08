@@ -19,12 +19,12 @@ public class StrategyPatternDemo {
         System.out.println("对整型数4和5作相应策略运算结果如下：");
 
         Context context = new Context(new OperationAdd());
-        System.out.println("加法策略 4+5= "+context.executeStrategy(4,5));
+        System.out.println("加法策略: 4+5= "+context.executeStrategy(4,5));
 
         context = new Context(new OperationSubstract());
-        System.out.println("减法策略 4-5="+context.executeStrategy(4,5));
+        System.out.println("减法策略: 4-5="+context.executeStrategy(4,5));
 
         context = new Context(new OperationMultiply());
-        System.out.println("乘法策略 4*5="+context.executeStrategy(4,5));
+        System.out.println("乘法策略: 4*5="+context.executeStrategy(4,5));
     }
 }
