@@ -71,23 +71,20 @@
 </td>
 <td>
 <ul>
-<li></li>
-<li></li>
-<li></li><li></li>
-<li></li>
+<li>责任链模式（Chain of Responsibility Pattern）</li>
+<li>命令模式（Command Pattern）</li>
+<li>解释器模式（Interpreter Pattern）</li>
+<li>迭代器模式（Iterator Pattern）</li>
+<li>中介者模式（Mediator Pattern）</li>
+<li>备忘录模式（Memento Pattern）</li>
+<li>观察者模式（Observer Pattern）</li>
+<li>状态模式（State Pattern）</li>
+<li>空对象模式（Null Object Pattern）</li>
+<li>策略模式（Strategy Pattern）</li>
+<li>模板模式（Template Pattern）</li>
+<li>访问者模式（Visitor Pattern）</li>
 </ul>
-责任链模式（Chain of Responsibility Pattern）
-命令模式（Command Pattern）
-解释器模式（Interpreter Pattern）
-迭代器模式（Iterator Pattern）
-中介者模式（Mediator Pattern）
-备忘录模式（Memento Pattern）
-观察者模式（Observer Pattern）
-状态模式（State Pattern）
-空对象模式（Null Object Pattern）
-策略模式（Strategy Pattern）
-模板模式（Template Pattern）
-访问者模式（Visitor Pattern）
+
 </td>
 </tr>
 <tr>
@@ -96,14 +93,17 @@
 <strong>J2EE 模式</strong>这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。
 </td>
 <td>
-MVC 模式（MVC Pattern）
-业务代表模式（Business Delegate Pattern）
-组合实体模式（Composite Entity Pattern）
-数据访问对象模式（Data Access Object Pattern）
-前端控制器模式（Front Controller Pattern）
-拦截过滤器模式（Intercepting Filter Pattern）
-服务定位器模式（Service Locator Pattern）
-传输对象模式（Transfer Object Pattern）
+<ul>
+<li>MVC 模式（MVC Pattern）</li>
+<li>业务代表模式（Business Delegate Pattern）</li>
+<li>组合实体模式（Composite Entity Pattern）</li>
+<li>数据访问对象模式（Data Access Object Pattern）</li>
+<li>前端控制器模式（Front Controller Pattern）</li>
+<li>拦截过滤器模式（Intercepting Filter Pattern）</li>
+<li>服务定位器模式（Service Locator Pattern）</li>
+<li>传输对象模式（Transfer Object Pattern）</li>
+</ul>
+
 </td>
 </tr>
 </table>
