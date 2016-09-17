@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="learn-designPattern" />
         <module name="learn-largeFileUploader" />
+        <module name="learn-rpc" />
         <module name="learn-scala" />
         <module name="learn-springMongo" />
       </profile>
@@ -32,6 +33,7 @@
       <module name="learn" target="1.8" />
       <module name="learn-designPattern" target="1.8" />
       <module name="learn-largeFileUploader" target="1.8" />
+      <module name="learn-rpc" target="1.8" />
       <module name="learn-springMongo" target="1.8" />
     </bytecodeTargetLevel>
   </component>

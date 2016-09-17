@@ -5,6 +5,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="learn-largeFileUploader" />
+          <element id="module-output" name="learn-designPattern" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.1.9.RELEASE" />
@@ -52,6 +53,11 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.1.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.1.9.RELEASE" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.3/xstream-1.4.3.jar" />
+          <element id="file-copy" path="D:/apache-maven-3.3.9/包下载/target/dependency/joda-time-1.6.2.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="learn-largeFileUploader/web/Web" />
