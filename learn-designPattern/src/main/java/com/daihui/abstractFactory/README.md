@@ -1,27 +1,24 @@
-# 抽象工厂模式
-抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。      
-在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。       
----
-## 什么是 GOF（四人帮，全拼 Gang of Four）？
-在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 **Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素）** 的书，该书首次提到了软件开发中设计模式的概念。    
-四位作者合称 **GOF（四人帮，全拼 Gang of Four）**。他们所提出的设计模式主要是基于以下的面向对象设计原则。
+# 抽象工厂模式      
+抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。     
+在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。
 
-* 对接口编程而不是对实现编程。
-* 优先使用对象组合而不是继承。
+## 介绍
+**意图：**提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。    
+**主要解决：**主要解决接口选择的问题。    
+**何时使用：**系统的产品有多于一个的产品族，而系统只消费其中某一族的产品。    
+**如何解决：**在一个产品族里面，定义多个产品。    
+**关键代码：**在一个工厂里聚合多个同类产品。    
+**应用实例：**工作了，为了参加一些聚会，肯定有两套或多套衣服吧，比如说有商务装（成套，一系列具体产品）、时尚装（成套，一系列具体产品），甚至对于一个家庭来说，可能有商务女装、商务男装、时尚女装、时尚男装，这些也都是成套的，即一系列具体产品。假设一种情况（现实中是不存在的，要不然，没法进入共产主义了，但有利于说明抽象工厂模式），在您的家中，某一个衣柜（具体工厂）只能存放某一种这样的衣服（成套，一系列具体产品），每次拿这种成套的衣服时也自然要从这个衣柜中取出了。用 OO 的思想去理解，所有的衣柜（具体工厂）都是衣柜类的（抽象工厂）某一个，而每一件成套的衣服又包括具体的上衣（某一具体产品），裤子（某一具体产品），这些具体的上衣其实也都是上衣（抽象产品），具体的裤子也都是裤子（另一个抽象产品）。    
+**优点：**当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。    
+**缺点：**产品族扩展非常困难，要增加一个系列的某一产品，既要在抽象的 Creator 里加代码，又要在具体的里面加代码。    
+**使用场景：**     
+1、QQ 换皮肤，一整套一起换。    
+2、生成不同操作系统的程序。    
+***注意事项：***产品族难扩展，产品等级易扩展
 
----
-## 设计模式的使用
-设计模式在软件开发中的两个主要用途。
+##实现
+我们将创建 Shape 和 Color 接口和实现这些接口的实体类。下一步是创建抽象工厂类 AbstractFactory。接着定义工厂类 ShapeFactory 和 ColorFactory，这两个工厂类都是扩展了 AbstractFactory。然后创建一个工厂创造器/生成器类 FactoryProducer。
+AbstractFactoryPatternDemo，我们的演示类使用 FactoryProducer 来获取 AbstractFactory 对象。它将向 AbstractFactory 传递形状信息 Shape（CIRCLE / RECTANGLE / SQUARE），以便获取它所需对象的类型。同时它还向 AbstractFactory 传递颜色信息 Color（RED / GREEN / BLUE），以便获取它所需对象的类型。
+![设计模式之间的关系](https://github.com/d470969047h/learn/blob/master/learn-designPattern/src/main/java/com/daihui/abstractFactory/resources/abstractfactory_pattern_uml_diagram.jpg)
 
----
-### 设计模式的类型
-根据设计模式的参考书 **Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素）** 中所提到的，总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE 设计模式。       
-
-
-下面用一个图片来整体描述一下设计模式之间的关系：
-![设计模式之间的关系](https://github.com/d470969047h/learn/blob/master/learn-designPattern/src/main/java/com/daihui/resources/the-relationship-between-design-patterns.jpg)
-
-## 设计模式的六大原则 
-**1、开闭原则（Open Close Principle）**    
-开闭原则的意思是： **对扩展开放，对修改关闭。** 在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。   
     
