@@ -1,6 +1,6 @@
-package com.daihui.abstractFactory.interfaces.impl;
+package com.daihui.abstractFactory.service.impl;
 
-import com.daihui.abstractFactory.interfaces.Color;
+import com.daihui.abstractFactory.service.Color;
 
 /**
  * 步骤4

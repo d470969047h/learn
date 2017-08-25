@@ -2,8 +2,8 @@ package com.daihui.abstractFactory.client;
 
 import com.daihui.abstractFactory.factory.AbstractFactory;
 import com.daihui.abstractFactory.factory.FactoryProducer;
-import com.daihui.abstractFactory.interfaces.Color;
-import com.daihui.abstractFactory.interfaces.Shape;
+import com.daihui.abstractFactory.service.Color;
+import com.daihui.abstractFactory.service.Shape;
 
 /**
  * 使用 FactoryProducer 来获取 AbstractFactory，通过传递类型信息来获取实体类的对象。

@@ -1,10 +1,10 @@
 package com.daihui.abstractFactory.factory;
 
-import com.daihui.abstractFactory.interfaces.Color;
-import com.daihui.abstractFactory.interfaces.Shape;
-import com.daihui.abstractFactory.interfaces.impl.Blue;
-import com.daihui.abstractFactory.interfaces.impl.Green;
-import com.daihui.abstractFactory.interfaces.impl.Red;
+import com.daihui.abstractFactory.service.Color;
+import com.daihui.abstractFactory.service.Shape;
+import com.daihui.abstractFactory.service.impl.Blue;
+import com.daihui.abstractFactory.service.impl.Green;
+import com.daihui.abstractFactory.service.impl.Red;
 
 /**
  * 步骤 6

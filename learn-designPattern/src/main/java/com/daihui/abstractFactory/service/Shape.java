@@ -1,4 +1,4 @@
-package com.daihui.abstractFactory.interfaces;
+package com.daihui.abstractFactory.service;
 
 /**
  * 步骤 1

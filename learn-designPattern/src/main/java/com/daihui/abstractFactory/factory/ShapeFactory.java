@@ -1,10 +1,10 @@
 package com.daihui.abstractFactory.factory;
 
-import com.daihui.abstractFactory.interfaces.Color;
-import com.daihui.abstractFactory.interfaces.Shape;
-import com.daihui.abstractFactory.interfaces.impl.Circle;
-import com.daihui.abstractFactory.interfaces.impl.Rectangle;
-import com.daihui.abstractFactory.interfaces.impl.Square;
+import com.daihui.abstractFactory.service.Color;
+import com.daihui.abstractFactory.service.Shape;
+import com.daihui.abstractFactory.service.impl.Circle;
+import com.daihui.abstractFactory.service.impl.Rectangle;
+import com.daihui.abstractFactory.service.impl.Square;
 
 /**
  * 步骤 6

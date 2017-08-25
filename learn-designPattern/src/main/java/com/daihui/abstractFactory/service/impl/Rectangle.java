@@ -1,6 +1,6 @@
-package com.daihui.abstractFactory.interfaces.impl;
+package com.daihui.abstractFactory.service.impl;
 
-import com.daihui.abstractFactory.interfaces.Shape;
+import com.daihui.abstractFactory.service.Shape;
 
 /**
  * 步骤 2
