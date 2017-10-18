@@ -12,8 +12,7 @@
         <!--<module>learn-scala</module>-->
         <!--<module>learn-springMongo</module>-->
         <module>learn-designPattern</module>
-        <module>learn-largeFileUploader</module>
-        <module>learn-rpc</module>
+        <!--<module>learn-rpc</module>-->
 
     </modules>
 

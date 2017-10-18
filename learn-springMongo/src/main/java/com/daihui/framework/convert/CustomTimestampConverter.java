@@ -11,15 +11,15 @@ import java.util.Date;
 public class CustomTimestampConverter implements Converter<String, Timestamp> {
     private static final Logger logger = Logger.getLogger(CustomTimestampConverter.class);
 
-    @Override
+
     public Timestamp convert(String source) {
         if ((null == source) || (source.trim().length() == 0)) {
             return null;
         }
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
-            Date tmp_date = dateFormat.parse(source);
-            return new Timestamp(tmp_date.getTime());
+            Date tmpDate = dateFormat.parse(source);
+            return new Timestamp(tmpDate.getTime());
         } catch (ParseException e) {
             if (logger.isDebugEnabled()) {
                 logger.error(e.getMessage(), e);

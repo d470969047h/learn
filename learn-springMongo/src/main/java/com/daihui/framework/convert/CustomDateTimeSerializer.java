@@ -13,11 +13,12 @@ import java.util.Date;
  * 自定义返回JSON 数据格中日期格式化处理
  */
 public class CustomDateTimeSerializer extends JsonSerializer<Date> {
-    private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static final SimpleDateFormat FORMATTER = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
 
     @Override
-    public void serialize(Date value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
-        String formattedDate = formatter.format(value);
+    public void serialize(Date value, JsonGenerator jgen, SerializerProvider provider) throws IOException {
+        String formattedDate = FORMATTER.format(value);
         jgen.writeString(formattedDate);
     }
 

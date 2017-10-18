@@ -15,6 +15,7 @@ public class DataSourceSpyInterceptor implements MethodInterceptor {
         return rdbmsSpecifics;
     }
 
+    @Override
     public Object invoke(MethodInvocation invocation) throws Throwable {
         Object result = invocation.proceed();
         if (SpyLogFactory.getSpyLogDelegator().isJdbcLoggingEnabled()) {

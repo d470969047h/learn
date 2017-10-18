@@ -16,7 +16,7 @@ import org.apache.thrift.transport.TTransportException;
  */
 public class MyServer {
 
-    public static void StartsimpleServer(SubService.Processor<AdditionServiceHandler> processor) {
+    public static void startSimpleServer(SubService.Processor<AdditionServiceHandler> processor) {
         try {
             TServerTransport serverTransport = new TServerSocket(9090);
             TServer server = new TSimpleServer(new Args(serverTransport).processor(processor));
@@ -31,6 +31,6 @@ public class MyServer {
     }
 
     public static void main(String[] args) {
-        StartsimpleServer(new SubService.Processor<AdditionServiceHandler>(new AdditionServiceHandler()));
+        startSimpleServer(new SubService.Processor<AdditionServiceHandler>(new AdditionServiceHandler()));
     }
 }

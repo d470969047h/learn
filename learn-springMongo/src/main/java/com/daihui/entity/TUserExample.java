@@ -201,10 +201,10 @@ public class TUserExample {
      *
      * @mbggenerated Wed Oct 07 22:52:40 CST 2015
      */
-    protected abstract static class GeneratedCriteria {
+    protected abstract static class AbstractGeneratedCriteria {
         protected List<Criterion> criteria;
 
-        protected GeneratedCriteria() {
+        protected AbstractGeneratedCriteria() {
             super();
             criteria = new ArrayList<Criterion>();
         }
@@ -474,7 +474,7 @@ public class TUserExample {
      *
      * @mbggenerated do_not_delete_during_merge Wed Oct 07 22:52:40 CST 2015
      */
-    public static class Criteria extends GeneratedCriteria {
+    public static class Criteria extends AbstractGeneratedCriteria {
 
         protected Criteria() {
             super();
