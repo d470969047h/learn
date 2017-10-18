@@ -13,6 +13,7 @@ import com.daihui.builder.service.Packing;
  */
 public class Bottle implements Packing {
 
+    @Override
     public String pack() {
         return "Bottle（瓶子）";
     }

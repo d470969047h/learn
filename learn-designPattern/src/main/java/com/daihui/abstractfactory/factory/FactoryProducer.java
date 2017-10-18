@@ -1,4 +1,4 @@
-package com.daihui.abstractFactory.factory;
+package com.daihui.abstractfactory.factory;
 
 /**
  * 步骤 7
@@ -10,9 +10,9 @@ package com.daihui.abstractFactory.factory;
  */
 public class FactoryProducer {
     public static AbstractFactory getFactory(String choice) {
-        if (choice.equalsIgnoreCase("SHAPE")) {
+        if ("SHAPE".equalsIgnoreCase(choice)) {
             return new ShapeFactory();
-        } else if (choice.equalsIgnoreCase("COLOR")) {
+        } else if ("COLOR".equalsIgnoreCase(choice)) {
             return new ColorFactory();
         }
         return null;

@@ -2,7 +2,7 @@ package com.daihui.builder.service.impl;
 
 import com.daihui.builder.service.Item;
 import com.daihui.builder.service.Packing;
-import com.daihui.builder.service.impl.Bottle;
+import com.daihui.builder.service.impl.Wrapper;
 
 /**
  * 步骤 3
@@ -12,11 +12,11 @@ import com.daihui.builder.service.impl.Bottle;
  * @author daihui
  * @since 2017/9/13.
  */
-public abstract class ColdDrink implements Item {
+public abstract class BaseBurger implements Item {
 
     @Override
     public Packing packing(){
-        return new Bottle();
+        return new Wrapper();
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.daihui.builder.entity;
 
-import com.daihui.builder.service.impl.ColdDrink;
+import com.daihui.builder.service.impl.BaseColdDrink;
 
 /**
  * 步骤 4
@@ -10,7 +10,7 @@ import com.daihui.builder.service.impl.ColdDrink;
  * @author daihui
  * @since 2017/9/13.
  */
-public class Coke extends ColdDrink {
+public class Coke extends BaseColdDrink {
 
     @Override
     public float price() {

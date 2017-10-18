@@ -1,6 +1,6 @@
 package com.daihui.builder.entity;
 
-import com.daihui.builder.service.impl.Burger;
+import com.daihui.builder.service.impl.BaseBurger;
 
 /**
  * 步骤 4
@@ -10,7 +10,7 @@ import com.daihui.builder.service.impl.Burger;
  * @author daihui
  * @since 2017/9/13.
  */
-public class ChickenBurger extends Burger {
+public class ChickenBurger extends BaseBurger {
 
     @Override
     public float price() {

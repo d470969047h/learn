@@ -1,10 +1,10 @@
-package com.daihui.abstractFactory.factory;
+package com.daihui.abstractfactory.factory;
 
-import com.daihui.abstractFactory.service.Color;
-import com.daihui.abstractFactory.service.Shape;
-import com.daihui.abstractFactory.service.impl.Blue;
-import com.daihui.abstractFactory.service.impl.Green;
-import com.daihui.abstractFactory.service.impl.Red;
+import com.daihui.abstractfactory.service.Color;
+import com.daihui.abstractfactory.service.Shape;
+import com.daihui.abstractfactory.service.impl.Blue;
+import com.daihui.abstractfactory.service.impl.Green;
+import com.daihui.abstractfactory.service.impl.Red;
 
 /**
  * 步骤 6
@@ -21,11 +21,11 @@ public class ColorFactory extends AbstractFactory {
         if (color == null) {
             return null;
         }
-        if (color.equalsIgnoreCase("RED")) {
+        if ("RED".equalsIgnoreCase(color)) {
             return new Red();
-        } else if (color.equalsIgnoreCase("GREEN")) {
+        } else if ("GREEN".equalsIgnoreCase(color)) {
             return new Green();
-        } else if (color.equalsIgnoreCase("BLUE")) {
+        } else if ("BLUE".equalsIgnoreCase(color)) {
             return new Blue();
         }
         return null;

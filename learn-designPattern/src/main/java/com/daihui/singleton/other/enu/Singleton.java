@@ -8,6 +8,9 @@ package com.daihui.singleton.other.enu;
  */
 public enum  Singleton {
 
+    /**
+     * 实例
+     */
     INSTANCE;
 
     public void whateverMethod(){}

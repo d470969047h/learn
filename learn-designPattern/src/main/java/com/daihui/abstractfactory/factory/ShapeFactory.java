@@ -1,10 +1,10 @@
-package com.daihui.abstractFactory.factory;
+package com.daihui.abstractfactory.factory;
 
-import com.daihui.abstractFactory.service.Color;
-import com.daihui.abstractFactory.service.Shape;
-import com.daihui.abstractFactory.service.impl.Circle;
-import com.daihui.abstractFactory.service.impl.Rectangle;
-import com.daihui.abstractFactory.service.impl.Square;
+import com.daihui.abstractfactory.service.Color;
+import com.daihui.abstractfactory.service.Shape;
+import com.daihui.abstractfactory.service.impl.Circle;
+import com.daihui.abstractfactory.service.impl.Rectangle;
+import com.daihui.abstractfactory.service.impl.Square;
 
 /**
  * 步骤 6
@@ -29,11 +29,11 @@ public class ShapeFactory extends AbstractFactory {
         if(null==shapeType){
             return null;
         }
-        if (shapeType.equals("CIRCLE")) {
+        if ("CIRCLE".equals(shapeType)) {
             return new Circle();
-        } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
+        } else if ("RECTANGLE".equalsIgnoreCase(shapeType)) {
             return new Rectangle();
-        } else if (shapeType.equalsIgnoreCase("SQUARE")) {
+        } else if ("SQUARE".equalsIgnoreCase(shapeType)) {
             return new Square();
         }
         return null;

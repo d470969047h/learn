@@ -1,7 +1,7 @@
-package com.daihui.abstractFactory.factory;
+package com.daihui.abstractfactory.factory;
 
-import com.daihui.abstractFactory.service.Color;
-import com.daihui.abstractFactory.service.Shape;
+import com.daihui.abstractfactory.service.Color;
+import com.daihui.abstractfactory.service.Shape;
 
 /**
  * 步骤5

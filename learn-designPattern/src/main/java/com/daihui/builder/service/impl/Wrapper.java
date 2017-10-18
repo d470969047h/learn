@@ -13,6 +13,7 @@ import com.daihui.builder.service.Packing;
  */
 public class Wrapper implements Packing {
 
+    @Override
     public String pack() {
         return "Wrappe（包装）";
     }
