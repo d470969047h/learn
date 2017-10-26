@@ -19,6 +19,10 @@ public abstract class BaseBurger implements Item {
         return new Wrapper();
     }
 
+    /**
+     * 价格
+     * @return
+     */
     @Override
     public abstract float price();
 

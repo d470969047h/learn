@@ -17,6 +17,9 @@ import com.daihui.abstractfactory.service.impl.Square;
  */
 public class ShapeFactory extends AbstractFactory {
 
+    private static final String CIRCLE = "CIRCLE";
+    private static final String RECTANGLE = "RECTANGLE";
+    private static final String SQUARE = "SQUARE";
 
     @Override
     public Color getColor(String color) {
@@ -29,11 +32,11 @@ public class ShapeFactory extends AbstractFactory {
         if(null==shapeType){
             return null;
         }
-        if ("CIRCLE".equals(shapeType)) {
+        if (CIRCLE.equals(shapeType)) {
             return new Circle();
-        } else if ("RECTANGLE".equalsIgnoreCase(shapeType)) {
+        } else if (RECTANGLE.equalsIgnoreCase(shapeType)) {
             return new Rectangle();
-        } else if ("SQUARE".equalsIgnoreCase(shapeType)) {
+        } else if (SQUARE.equalsIgnoreCase(shapeType)) {
             return new Square();
         }
         return null;

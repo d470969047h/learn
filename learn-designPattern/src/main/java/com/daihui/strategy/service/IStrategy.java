@@ -9,5 +9,11 @@ package com.daihui.strategy.service;
  */
 public interface IStrategy {
 
+    /**
+     * 操作
+     * @param num1
+     * @param num2
+     * @return
+     */
     int doOperation(int num1, int num2);
 }

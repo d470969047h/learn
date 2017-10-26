@@ -16,12 +16,18 @@ import java.util.List;
 public class Meal {
     private List<Item> items = new ArrayList<Item>();
 
-    // 套餐各项
+    /**
+     * 套餐各项
+     * @param item
+     */
     public void addItem(Item item) {
         items.add(item);
     }
 
-    // 费用
+    /**
+     * 费用
+     * @return float
+     */
     public float getCost() {
         float cost = 0.0f;
         for (Item item : items) {

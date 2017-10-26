@@ -9,5 +9,9 @@ package com.daihui.builder.service;
  * @since 2017/9/13.
  */
 public interface Packing {
-    public String pack();
+    /**
+     * 包装
+     * @return
+     */
+    String pack();
 }

@@ -19,6 +19,10 @@ public abstract class BaseColdDrink implements Item {
         return new Bottle();
     }
 
+    /**
+     * 价格
+     * @return
+     */
     @Override
     public abstract float price();
 

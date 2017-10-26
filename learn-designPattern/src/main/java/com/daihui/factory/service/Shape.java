@@ -9,5 +9,8 @@ package com.daihui.factory.service;
  * @create 2016-09- 23:07
  */
 public interface Shape {
+    /**
+     * 画
+     */
     void draw();
 }

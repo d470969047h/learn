@@ -9,5 +9,8 @@ package com.daihui.abstractfactory.service;
  * @since 2016-09-24 1:52
  */
 public interface Color {
+    /**
+     * 填充方法
+     */
     void fill();
 }

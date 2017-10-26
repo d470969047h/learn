@@ -12,7 +12,17 @@ import com.daihui.abstractfactory.service.Shape;
  * @since 2016-09-24 1:59
  */
 public abstract class AbstractFactory {
+    /**
+     * 得到颜色
+     * @param color
+     * @return
+     */
     public abstract Color getColor(String color);
 
+    /**
+     * 得到形状
+     * @param shape
+     * @return
+     */
     public abstract Shape getShape(String shape);
 }

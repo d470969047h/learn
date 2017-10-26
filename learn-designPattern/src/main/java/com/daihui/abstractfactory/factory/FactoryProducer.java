@@ -9,10 +9,14 @@ package com.daihui.abstractfactory.factory;
  * @since 2016-09-24 2:12
  */
 public class FactoryProducer {
+
+    private static final String SHAPE = "SHAPE";
+    private static final String COLOR = "COLOR";
+
     public static AbstractFactory getFactory(String choice) {
-        if ("SHAPE".equalsIgnoreCase(choice)) {
+        if (SHAPE.equalsIgnoreCase(choice)) {
             return new ShapeFactory();
-        } else if ("COLOR".equalsIgnoreCase(choice)) {
+        } else if (COLOR.equalsIgnoreCase(choice)) {
             return new ColorFactory();
         }
         return null;

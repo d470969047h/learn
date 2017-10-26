@@ -9,7 +9,22 @@ package com.daihui.builder.service;
  * @since 2017/9/13.
  */
 public interface Item {
-    public String name();
-    public Packing packing();
-    public float price();
+
+    /**
+     * 名称
+     * @return
+     */
+    String name();
+
+    /**
+     * 包装
+     * @return
+     */
+    Packing packing();
+
+    /**
+     * 价格
+     * @return
+     */
+    float price();
 }
