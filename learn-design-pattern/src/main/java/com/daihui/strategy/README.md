@@ -35,4 +35,3 @@ StrategyPatternDemo，我们的演示类使用 Context 和策略对象来演示 
 
 ![策略模式的 UML 图](https://github.com/d470969047h/learn/blob/master/learn-design-pattern/src/main/java/com/daihui/strategy/resources/strategy_pattern_uml_diagram.jpg)
 
-_[本例子来源于菜鸟教程](http://www.runoob.com/design-pattern/strategy-pattern.html "本例子来源于菜鸟教程")_

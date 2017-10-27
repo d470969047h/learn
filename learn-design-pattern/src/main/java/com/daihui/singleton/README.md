@@ -34,6 +34,4 @@ SingleObject 类提供了一个静态方法，供外界获取它的静态实例�
 ![单例模式的 UML 图](https://github.com/d470969047h/learn/blob/master/learn-design-pattern/src/main/java/com/daihui/singleton/resources/singleton_pattern_uml_diagram.jpg)   
  
  
-**[本例子来源于菜鸟教程](http://www.runoob.com/design-pattern/state-pattern.html "本例子来源于菜鸟教程")**  
-
 
