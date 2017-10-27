@@ -111,7 +111,7 @@
 
 
 下面用一个图片来整体描述一下设计模式之间的关系：
-![设计模式之间的关系](https://github.com/d470969047h/learn/blob/master/learn-designPattern/src/main/java/com/daihui/resources/the-relationship-between-design-patterns.jpg)
+![设计模式之间的关系](https://github.com/d470969047h/learn/blob/master/learn-design-pattern/src/main/java/com/daihui/resources/the-relationship-between-design-patterns.jpg)
 
 ## 设计模式的六大原则 
 **1、开闭原则（Open Close Principle）**    
