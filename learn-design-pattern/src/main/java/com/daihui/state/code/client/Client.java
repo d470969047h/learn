@@ -1,20 +1,19 @@
+package com.daihui.state.code.client;
+
 import com.daihui.state.code.service.impl.StartState;
 import com.daihui.state.code.service.impl.StopState;
 import com.daihui.state.code.context.Context;
-import org.junit.Test;
 
 /**
- * 状态模式
+ * 客户端
  * 470969043@qq.com
  *
  * @author daihui
- * @since 2016-09-06 11:20
+ * @since 2016-09-06 10:54
  */
-public class Test_State {
+public class Client {
 
-
-    @Test
-    public void Test(){
+    public static void main(String[] args) {
         Context context = new Context();
 
         StartState startState = new StartState();
