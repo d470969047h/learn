@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Vue.set 全局操作</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <hr>
+    <div id="app">
+        <p>{{count}}</p>
+        <ul>
+            <li v-for=" aa in arr">{{aa}}</li>
+        </ul>
+       
+    </div>
+    <button onclick="add()">外部添加</button>
+
+    <script type="text/javascript">
+     
+        function add(){
+            console.log("我已经执行了");
+           // Vue.set(outData,'count',4);
+           // app.count++;
+           //outData.count++;
+           //app.arr[1]='ddd';
+           Vue.set(app.arr,1,'ddd');
+        }
+
+        var outData={
+            count:1,
+            goodName:'car',
+            arr:['aaa','bbb','ccc']
+        };
+        var app=new Vue({
+            el:'#app',
+            //引用外部数据
+            data:outData
+        })
+    </script>
+</body>
+</html>
