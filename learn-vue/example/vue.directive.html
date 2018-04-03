@@ -9,7 +9,7 @@
     <h1>vue.directive 自定义指令</h1>
     <hr>
     <div id="app">
-       <div v-jspang="color" id="aaa">
+       <div v-jspang="color">
            {{num}}
        </div>
        <p>
@@ -31,13 +31,13 @@
             bind:function(el,binding,vnode){//被绑定
                 /**
                         var s=JSON.stringify;
-                        el.innerHTML = 
-                            'name:'        + s(binding.name) +'<br>' + 
-                            'value:'       + s(binding.value) +'<br>' + 
+                        el.innerHTML =
+                            'name:'        + s(binding.name) +'<br>' +
+                            'value:'       + s(binding.value) +'<br>' +
                             'expression:'  + s(binding.expression) +'<br>' ;
                 **/
                 el.style='color:'+binding.value;
-                  
+
 
                 console.log('1 - bind');
             },

@@ -20,22 +20,20 @@
            template:'<button>外部组件</button>'
        }
 
-
-        var app=new Vue({
-            el:'#app',
-            data:{
-                a:1
-            },
-            methods:{
-                add:function(num){
-                    
-                    return this.a+=num;
-                 }
-            },
-            components:{
-                "btn":btn
-            }
-        })
+      var app=new Vue({
+          el:'#app',
+          data:{
+              a:1
+          },
+          methods:{
+              add:function(num){
+                  return this.a+=num;
+               }
+          },
+          components:{
+              "btn":btn
+          }
+      })
     </script>
 </body>
 </html>

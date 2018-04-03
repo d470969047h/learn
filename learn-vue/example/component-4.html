@@ -8,44 +8,47 @@
 <body>
     <h1>component-4</h1>
     <hr>
-    <div id="app">
-       <component v-bind:is="who"></component>
-       <button @click="changeComponent">changeComponent</button>
+    <div id="otherApp">
+       <component v-bind:is="otherWho"></component>
+       <button @click="otherChangeComponent">changeComponent</button>
     </div>
 
     <script type="text/javascript">
-        var componentA={
-            template:`<div style="color:red;">I'm componentA</div>`
-        }
-        var componentB={
-            template:`<div style="color:green;">I'm componentB</div>`
-        }
-        var componentC={
-            template:`<div style="color:pink;">I'm componentC</div>`
-        }
-       
-        var app=new Vue({
-            el:'#app',
-            data:{
-                who:'componentA'
-            },
-            components:{
-                "componentA":componentA,
-                "componentB":componentB,
-                "componentC":componentC,
-            },
-            methods:{
-                changeComponent:function(){
-                    if(this.who=='componentA'){
-                        this.who='componentB';
-                    }else if(this.who=='componentB'){
-                        this.who='componentC';
-                    }else{
-                        this.who='componentA';
-                    }
-                }
+
+    var componentAA = {
+      template:`<div style="color:red;">I'm componentAA</div>`
+    }
+    var componentBB = {
+      template:`<div style="color:green;">I'm componentBB</div>`
+    }
+    var componentCC = {
+      template:`<div style="color:blue;">I'm componentCC</div>`
+    }
+
+
+    var otherApp = new Vue({
+      el:'#otherApp',
+      data:{
+        otherWho:'componentCC'
+      },
+      components:{
+        'componentAA':componentAA,
+        'componentBB':componentBB,
+        'componentCC':componentCC
+      },
+      methods:{
+        otherChangeComponent:function(){
+            if(this.otherWho=='componentAA'){
+                this.otherWho='componentBB';
+            }else if(this.otherWho=='componentBB'){
+                this.otherWho='componentCC';
+            }else{
+                this.otherWho='componentAA';
             }
-        })
+        }
+      }
+    });
+
     </script>
 </body>
 </html>

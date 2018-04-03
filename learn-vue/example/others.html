@@ -9,10 +9,11 @@
     <h1>v-pre & v-cloak & v-once 案例</h1>
     <hr>
     <div id="app">
-        <div v-pre>{{message}}</div>
+        <div v-pre>{{message}},直接显示原始值，不会输出vue的message</div>
         <div v-cloak>渲染完成后，才显示！</div>
         <div v-once>第一次绑定的值：{{message}}</div>
         <div><input type="text" v-model="message"></div>
+        <div>变化后的input值：{{message}}</div>
     </div>
     <style>
         [v-cloak]{
@@ -20,11 +21,12 @@
         }
     </style>
 
+
     <script type="text/javascript">
         var app=new Vue({
             el:'#app',
             data:{
-                message:'hello Vue!'
+                message:'hello Vue DH!'
             }
         })
     </script>

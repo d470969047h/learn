@@ -18,13 +18,19 @@
             template:`<div>this is city!</div>`
         }
 
+        var otherCity = {
+          template:`<div>this is other city!</div>`
+        }
+
         var world={
             template:`<div>
-                <p>局部注册的- &lt;world&gt;</p>     
-                <city></city>     
+                <p>局部注册的- &lt;world&gt;</p>
+                <city></city>
+                <otherCity></otherCity>
             </div>`,
             components:{
-                "city":city
+                "city":city,
+                "otherCity":otherCity
             }
         }
 

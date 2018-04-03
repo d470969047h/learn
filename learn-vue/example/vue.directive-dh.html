@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>vue.diriective 自定义指令</title>
+</head>
+<body>
+  <h1>vue.directive 自定义指令</h1>
+  <hr>
+  <div id="app">
+    <div v-daihui="color">
+      {{num}}
+    </div>
+    <p><button @click='addNum'>加分</button></p>
+
+  </div>
+  <div>
+    <button onclick="unbind()">unbind</button>
+  </div>
+
+
+    <script type="text/javascript">
+
+    function unbind(){
+      app.$destroy();
+    }
+
+    // el: 指令所绑定的元素，可以用来直接操作DOM。
+    // binding:  一个对象，包含指令的很多信息。
+    // vnode: Vue编译生成的虚拟节点。
+    Vue.directive('daihui',{//被绑定
+      bind:function(el,binding,vnode){
+        el.style='color:'+binding.value;
+
+
+        console.log(el);
+        console.log(binding);
+        console.log(vnode);
+        console.log('1: bind');
+      },
+      inserted:function(){//绑定到节点
+        console.log('2: inserted');
+      },
+      update:function(){//组件更新
+        console.log('3: update');
+      },
+      componentUpdated:function(){//组件更新完成
+        console.log('4: componentUpdated');
+      },
+      unbind:function(){//解绑
+        console.log('5: unbind');
+      }
+    });
+
+      var app = new Vue({
+        el:'#app',
+        data:{
+          num:10,
+          color:'green'
+        },
+        methods:{
+          addNum:function(){
+            this.num++;
+          }
+        }
+      })
+    </script>
+</body>
+</html>

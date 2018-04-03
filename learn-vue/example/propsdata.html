@@ -10,20 +10,21 @@
     <hr>
     <header></header>
     <script type="text/javascript">
-       var  header_a = Vue.extend({
-           template:'<p>{{message}}-{{a}}</p>',
-           data:function(){
-               return {
-                   message:'Hello ，I’m Header'
-               }
-           },
-           props:['a']
-       });
-       new header_a({
-           propsData:{
-               a:1
-           }
-       }).$mount('header');
+
+    var headerA = Vue.extend({
+      template:`<p>{{message}}-{{name}}</p>`,
+      data:function(){
+        return {
+          message:'Hello,I am header.'
+        }
+      },
+      props:['name']
+    });
+    new headerA({
+      propsData:{
+        name:'daihui'
+      }
+    }).$mount('header');
     </script>
 </body>
 </html>

@@ -12,7 +12,6 @@
         <hello></hello>
         <world></world>
     </div>
-
     <script type="text/javascript">
         Vue.component('hello',{
             template:`<div>{this.$parent.message}我是全局化注册的-&lt;hello&gt;</div>`,
@@ -24,7 +23,7 @@
         var world={
             template:'<div>{{this.$parent.message}}局部注册的-&lt;world&gt</div>'
         }
-    
+
         var app=new Vue({
             el:'#app',
             data:{

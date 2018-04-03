@@ -19,16 +19,21 @@
             data:{
                 message:'hello Vue!'
             },
-            //在Vue中使用jQuery
-            mounted:function(){
-                $('#app').html('我是jQuery!');
+
+            mounted() {
+              //do something after mounting vue instance
+              $('#app').html('123');
             },
+            //在Vue中使用jQuery，只能在update和mounted下才可以用三方库
+            // mounted:function(){
+            //     $('#app').html('我是jQuery!');
+            // },
             methods:{
                 add:function(){
                     console.log("调用了Add方法");
                 }
             }
-        
+
         })
         //打印app对象，看看里边都包含了什么属性和方法。
         console.log(app);

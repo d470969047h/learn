@@ -9,7 +9,8 @@
     <h1>Extends Optin Demo</h1>
     <hr>
     <div id="app">
-        {{message}}
+        <!-- {{message}} -->
+        ${message}
         <p><button @click="add">add</button></p>
     </div>
 
@@ -25,6 +26,7 @@
             }
         };
         var app=new Vue({
+          delimiters:['${','}'],
             el:'#app',
             data:{
                 message:'hello Vue!'
@@ -34,8 +36,8 @@
                     console.log('我是原生方法');
                 }
             },
-            extends:bbb,
-            delimiters:['${','}']
+            extends:bbb
+
         })
     </script>
 </body>

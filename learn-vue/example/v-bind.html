@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="../assets/js/vue.js"></script>
@@ -10,7 +10,7 @@
     <hr>
     <div id="app">
         <img v-bind:src="imgSrc"  width="200px"><br/>
-        <a :href="jspang" target="_blank">技术胖</a>
+        <a :href="daihui" target="_blank">daihui</a>
         <hr>
         <div :class="className">1、绑定classA</div>
         <div :class="{classA:isOk}">2、绑定class中的判断</div>
@@ -37,8 +37,8 @@
         var app=new Vue({
             el:'#app',
             data:{
-                imgSrc:'http://jspang.com/wp-content/uploads/2017/02/vue01-2.jpg',
-                jspang:'http://jspang.com',
+                imgSrc:'https://avatars2.githubusercontent.com/u/7134640?s=460&v=4',
+                daihui:'https://github.com/d470969047h',
                 className:'classA',
                 isOk:false,
                 classA:'classA',

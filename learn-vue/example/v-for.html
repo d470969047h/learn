@@ -10,9 +10,7 @@
     <hr>
     <div id="app">
        <ul>
-           <li v-for="item in sortItems">
-                {{item}}
-           </li>
+           <li v-for="(item,index) in sortItems">{{index}}: {{item}}</li>
        </ul>
        <hr>
        <ul>
@@ -28,10 +26,10 @@
             data:{
                 items:[20,23,18,65,32,19,5,56,41],
                 students:[
-                    {name:'jspang',age:32},
-                    {name:'Panda',age:30},
-                    {name:'PanPaN',age:21},
-                    {name:'King',age:45}
+                    {name:'daihui1',age:32},
+                    {name:'daihui2',age:30},
+                    {name:'daihui3',age:21},
+                    {name:'daihui4',age:45}
                 ]
             },
            computed:{
@@ -44,7 +42,7 @@
            }
         });
 
-        //数组对象方法排序:
+        // 数组对象方法排序:
         function sortByKey(array,key){
             return array.sort(function(a,b){
                 var x=a[key];

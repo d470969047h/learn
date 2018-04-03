@@ -1,1 +1,1 @@
-Hello Vue ajax!
+请求1.txt文件内容

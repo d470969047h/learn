@@ -28,14 +28,22 @@
                 price:100,
                 newsList:newsList
             },
-        computed:{
-            newPrice:function(){
-                return this.price='￥' + this.price + '元';
-            },
-            reverseNews:function(){
+            computed:{
+              newPrice:function(){
+                return this.price = '￥' + this.price + '元';
+              },
+              reverseNews:function(){
                 return this.newsList.reverse();
+              }
             }
-        }
+        // computed:{
+        //     newPrice:function(){
+        //         return this.price='￥' + this.price + '元';
+        //     },
+        //     reverseNews:function(){
+        //         return this.newsList.reverse();
+        //     }
+        // }
         })
     </script>
 </body>

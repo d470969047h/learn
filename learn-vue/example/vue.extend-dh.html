@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>vue.extend</title>
+</head>
+<body>
+    <h1>Vue.extend</h1>
+    <hr>
+    <author></author>
+    <div id="myInput"></div>
+
+
+    <script type="text/javascript">
+      var AuthorExtend = Vue.extend({
+        template:`<p><a :href='authorUrl'>{{authorName}}</a></p>`,
+        data:function(){
+            return{
+              authorName:'daihui',
+              authorUrl:'http://blog.daihui888.com'
+            }
+        }
+      });
+      new AuthorExtend().$mount('author');
+
+
+      var ChangeAuthorExtend = Vue.extend({
+        template:`<input type='text' v-model='authorName' @keyup.enter='changeName'/>`,
+        data:function(){
+          return{
+            btnName:'改变名称',
+            authorName:'daihui'
+          }
+        },
+        methods:{
+          changeName:function(){
+            this.authorName = '戴晖';
+          }
+        }
+      });
+      new ChangeAuthorExtend().$mount('#myInput');
+
+    </script>
+</body>
+</html>

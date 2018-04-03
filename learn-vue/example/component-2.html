@@ -9,27 +9,43 @@
     <h1>component-2 props Demo</h1>
     <hr>
     <div id="app">
-        
+
         <helloworld :here="message"></helloworld>
     </div>
 
+    <template id="dd2">
+      <h2>2.template模板</h2>
+    </template>
+
+    <script type="x-template" id="dd3">
+      <h2>3.script模板</h2>
+    </script>
+
     <script type="text/javascript">
-        
-        var helloworld = { 
+
+        var helloworld = {
             template:`<div>my here is {{here}}.</div>`,
             props:['here']
-            
+
         }
-    
+
         var app=new Vue({
             el:'#app',
             data:{
-                message:'USA'
+                message:'戴晖'
             },
+            // components:{
+            //   'helloworld':{
+            //     template:'<h2>daihui is {{name}}</h2>',
+            //     props:['name']
+            //   }
+            // }
+            // template:'#dd3'
             components:{
                 "helloworld":helloworld
             }
         })
+
     </script>
 </body>
 </html>

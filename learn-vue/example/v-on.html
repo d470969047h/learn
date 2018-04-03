@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="../assets/js/vue.js"></script>
@@ -12,9 +12,10 @@
        本场比赛得分： {{count}}<br/>
        <button v-on:click="jiafen">加分</button>
        <button @click="jianfen">减分</button>
+        <button @click="jiasanfen">加3分</button>
        <hr> 
        <input type="text" v-on:keyup.enter="onEnter" v-model="secondCount">
-
+        <input type="text" @keyup.enter="onEnterNew" v-model="thirdlyCount">
     </div>
 
     <script type="text/javascript">
@@ -22,7 +23,8 @@
             el:'#app',
             data:{
                 count:1,
-                secondCount:1
+                secondCount:1,
+                thirdlyCount:3
             },
             methods:{
                 jiafen:function(){
@@ -33,6 +35,12 @@
                 },
                 onEnter:function(){
                     this.count=this.count+parseInt(this.secondCount);
+                },
+                onEnterNew:function () {
+                    this.count = this.count + parseInt(this.thirdlyCount);
+                },
+                jiasanfen:function () {
+                    this.count = this.count + 3;
                 }
             }
         })

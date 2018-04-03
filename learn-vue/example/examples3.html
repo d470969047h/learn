@@ -11,12 +11,12 @@
     <div id="app">
         <p>{{num}}</p>
         <button @click="add">add</button>
-        
+
     </div>
      <p><button onclick="reduce()">reduce</button></p>
      <p><button onclick="reduceOnce()">reduceOnce</button></p>
      <p><button onclick="off()">off</button></p>
-     
+
 
     <script type="text/javascript">
         var app=new Vue({
@@ -27,33 +27,37 @@
                     this.num++;
                 }
             }
-        })
-        //实例事件
-        app.$on('reduce',function(){
-            console.log('执行了reduce()');
-            this.num--;
         });
+        // 实例事件
+        app.$on('reduce',function(){
+          console.log('执行了reduce()');
+          this.num --;
+        });
+        app.$once('reduceOnce',function(){
+          console.log('1次调用');
+        });
+
+
+        //外部调用内部事件
+        function reduce(){
+          app.$emit('reduce');
+        }
+
+        function reduceOnce(){
+          app.$emit('reduceOnce');
+        }
+
         //只使用一次的实例方法
         app.$once('reduceOnce',function(){
             console.log('只执行一次的方法');
             this.num--;
-
         });
-
-        //关闭事件
         function off(){
-            app.$off('reduce');
+          app.$off('reduceOnce');
         }
 
-//外部调用内部事件
-function reduce(){
-    app.$emit('reduce');
-}
-        function reduceOnce(){
-            app.$emit('reduceOnce');
-        }
 
-     
+
     </script>
 </body>
 </html>
