@@ -21,6 +21,7 @@ public class ColorFactory extends AbstractFactory {
     private static final String GREEN = "GREEN";
     private static final String BLUE = "BLUE";
 
+
     @Override
     public Color getColor(String color) {
         if (color == null) {
@@ -35,6 +36,7 @@ public class ColorFactory extends AbstractFactory {
         }
         return null;
     }
+
 
     @Override
     public Shape getShape(String shape) {
