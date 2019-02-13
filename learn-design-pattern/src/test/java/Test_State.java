@@ -3,6 +3,10 @@ import com.daihui.state.code.service.impl.StopState;
 import com.daihui.state.code.context.Context;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * 状态模式
  * 470969043@qq.com
@@ -15,6 +19,7 @@ public class Test_State {
 
     @Test
     public void Test(){
+
         Context context = new Context();
 
         StartState startState = new StartState();
