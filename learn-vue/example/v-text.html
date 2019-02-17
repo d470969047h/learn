@@ -10,7 +10,7 @@
     <hr>
     <div id="app">
         <span>{{ message }}</span>=<span v-text="message"></span><br/>
-        <span v-html="msgHtml"></span>
+        <span v-html="getHtml()"></span>
     </div>
 
     <script type="text/javascript">
@@ -19,6 +19,13 @@
             data:{
                 message:'hello huihui!',
                 msgHtml:'<h2>hello VUE2!</h2>'
+            },
+            methods: {
+              getHtml() {
+                if(true){
+                  return '<h2>我是方法里拿来的呀~</h2>'
+                }
+              }
             }
         })
     </script>

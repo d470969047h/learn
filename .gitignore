@@ -1,6 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 /.idea/
-/learn-designPattern/learn-designPattern.iml
 /learn.iml
 /learn-rpc/learn-rpc.iml
 /learn-scala/learn-scala.iml
@@ -8,6 +7,11 @@
 /learn-design-pattern/learn-design-pattern.iml
 /learn-design-pattern/target/
 /learn-vue/learn-vue.iml
-learn-design-pattern/learn-designPattern.iml
 /learn-vue/webpack/demo01/node_modules/
 /learn-vue/webpack/demo02/node_modules/
+.gitignore
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml
+/learn-rocketmq/learn-rocketmq.iml

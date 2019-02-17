@@ -9,12 +9,13 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>learn-design-pattern</module>
+
+        <!--<module>learn-rpc</module>-->
         <!--<module>learn-scala</module>-->
         <!--<module>learn-springMongo</module>-->
-        <module>learn-design-pattern</module>
-        <!--<module>learn-rpc</module>-->
+
 
     </modules>
-
 
 </project>
