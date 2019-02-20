@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk8
+before_install:
+  - cd ./learn-design-pattern
+  - "echo skipped"
+install:
+  - "echo skipped"
+script:
+  - mvn clean install -U -Dmaven.test.skip=true
