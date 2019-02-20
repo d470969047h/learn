@@ -15,3 +15,4 @@ mvnw
 mvnw.cmd
 pom.xml
 /learn-rocketmq/learn-rocketmq.iml
+.DS_Store
