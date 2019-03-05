@@ -1,12 +1,13 @@
 package com.daihui.decorator.code.step5;
 
-import com.daihui.decorator.code.step1.Shape;
-import com.daihui.decorator.code.step2.Circle;
-import com.daihui.decorator.code.step2.Rectangle;
-import com.daihui.decorator.code.step4.RedShapeDecorator;
+import com.daihui.decorator.code.step1.House;
+import com.daihui.decorator.code.step2.HardcoverRoom;
+import com.daihui.decorator.code.step2.RoughcastHouse;
+import com.daihui.decorator.code.step4.ConfigureFurnitureDecorator;
+import com.daihui.decorator.code.step4.DecorateHouseDecorator;
 
 /**
- * @Description: 步骤 5 使用 RedShapeDecorator 来装饰 Shape 对象。
+ * @Description: 步骤 5 使用 ConfigureFurnitureDecorator和DecorateHouseDecorator 来装饰 House 对象。
  * @Date: Created in 15:19 2019-03-05
  * @Author: daihui
  * @Modified By:
@@ -15,18 +16,15 @@ public class DecoratorPatternDemoHouse {
 
     public static void main(String[] args) {
 
-        Shape circle = new Circle();
-        Shape redCircle = new RedShapeDecorator(new Circle());
+        House house = new RoughcastHouse("天津实地海棠雅著");
+        House decorateHouse = new DecorateHouseDecorator(house);
+        House configureFurniture = new ConfigureFurnitureDecorator(decorateHouse);
+        configureFurniture.live();
 
-        Shape redRectangle = new RedShapeDecorator(new Rectangle());
-        System.out.println("普通圆形：");
-        circle.draw();
+        System.out.println("\n");
+        House hardcoverRoom = new HardcoverRoom("昆明市万彩城");
+        House configureFurnitureRoom = new ConfigureFurnitureDecorator(hardcoverRoom);
+        configureFurnitureRoom.live();
 
-
-        System.out.println("\n红色的圆：");
-        redCircle.draw();
-
-        System.out.println("\n红色的矩形：");
-        redRectangle.draw();
     }
 }

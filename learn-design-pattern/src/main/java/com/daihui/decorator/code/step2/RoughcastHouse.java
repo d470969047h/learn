@@ -10,8 +10,14 @@ import com.daihui.decorator.code.step1.House;
  */
 public class RoughcastHouse implements House {
 
+    private String houseAddr;
+
+    public RoughcastHouse(String houseAddr) {
+        this.houseAddr = houseAddr;
+    }
+
     @Override
     public void live() {
-        System.out.println("住在毛坯房");
+        System.out.println(houseAddr + "的毛坯房");
     }
 }

@@ -9,8 +9,15 @@ import com.daihui.decorator.code.step1.House;
  * @Modified By:
  */
 public class HardcoverRoom implements House {
+
+    private String houseAddr;
+
+    public HardcoverRoom(String houseAddr) {
+        this.houseAddr = houseAddr;
+    }
+
     @Override
     public void live() {
-        System.out.println("住在精装房");
+        System.out.println(houseAddr + "的精装房");
     }
 }

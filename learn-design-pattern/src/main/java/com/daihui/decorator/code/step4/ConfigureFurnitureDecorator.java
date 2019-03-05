@@ -17,6 +17,7 @@ public class ConfigureFurnitureDecorator extends HouseDecorator {
 
     @Override
     public void live() {
+        super.live();
         configureFurniture();
     }
 

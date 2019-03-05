@@ -17,6 +17,7 @@ public class DecorateHouseDecorator extends HouseDecorator {
 
     @Override
     public void live() {
+        super.live();
         System.out.println("装修房子");
     }
 }
