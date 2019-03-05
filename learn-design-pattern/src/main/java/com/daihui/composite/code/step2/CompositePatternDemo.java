@@ -1,6 +1,6 @@
-package com.daihui.composite.code.setp2;
+package com.daihui.composite.code.step2;
 
-import com.daihui.composite.code.setp1.Employee;
+import com.daihui.composite.code.step1.Employee;
 
 /**
  * @Description: 步骤 2 使用 Employee 类来创建和打印员工的层次结构。

@@ -1,4 +1,4 @@
-package com.daihui.composite.code.setp1;
+package com.daihui.composite.code.step1;
 
 import java.util.ArrayList;
 import java.util.List;
