@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>learn-design-pattern</module>
+        <module>learn-java8</module>
 
         <!--<module>learn-rpc</module>-->
         <!--<module>learn-scala</module>-->
