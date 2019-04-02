@@ -16,3 +16,7 @@ mvnw.cmd
 pom.xml
 /learn-rocketmq/learn-rocketmq.iml
 .DS_Store
+/learn-java8/learn-java8.iml
+
+learn_flutter/ios/Frameworks/
+learn_flutter/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
