@@ -20,3 +20,4 @@ pom.xml
 
 learn_flutter/ios/Frameworks/
 learn_flutter/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+/learn-exercises/learn-exercises.iml
