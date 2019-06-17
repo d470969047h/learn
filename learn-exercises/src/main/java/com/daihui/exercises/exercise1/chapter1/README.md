@@ -28,8 +28,7 @@ JMM关于同步的规定：
 然后对变量进行操作，操作完成后再将变量写回主内存，不能直接操作主内存中的变量，各个线程中的工作内存中存储着主内存中的变量副本拷贝，
 因此不同的线程间无法访问对方的工作内存，线程间的通信（传值）必须通过主内存来完成，其简要访问过程如下图：
 
-![1png](https://github.com/d470969047h/learn/tree/master/learn-exercises/src/main/resources/exercises1/chapter1/1.png)
-
+![1png](https://github.com/d470969047h/learn/tree/master/learn-exercises/src/main/resources/exercise1/chapter1/1.png)
 
 ### 线程安全获得保证
 
