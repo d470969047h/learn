@@ -33,9 +33,7 @@ public class SingletonDemo {
 
     public static void main(String[] args) {
         for(int i = 1; i <= 10; i++){
-            new Thread(() -> {
-                SingletonDemo.getInstance();
-            },String.valueOf(i)).start();
+            new Thread(() -> SingletonDemo.getInstance(),String.valueOf(i)).start();
         }
     }
 }
