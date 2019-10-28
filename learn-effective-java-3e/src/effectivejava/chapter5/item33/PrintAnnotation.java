@@ -24,7 +24,7 @@ public class PrintAnnotation {
             System.exit(1);
         }
         String className = args[0];
-        String annotationTypeName = args[1]; 
+        String annotationTypeName = args[1];
         Class<?> klass = Class.forName(className);
         System.out.println(getAnnotation(klass, annotationTypeName));
     }

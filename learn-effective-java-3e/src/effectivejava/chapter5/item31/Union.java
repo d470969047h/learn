@@ -13,14 +13,14 @@ public class Union {
     // Simple program to exercise flexible generic staticfactory
     public static void main(String[] args) {
         Set<Integer> integers = new HashSet<>();
-        integers.add(1); 
-        integers.add(3); 
-        integers.add(5); 
+        integers.add(1);
+        integers.add(3);
+        integers.add(5);
 
         Set<Double> doubles =  new HashSet<>();
-        doubles.add(2.0); 
-        doubles.add(4.0); 
-        doubles.add(6.0); 
+        doubles.add(2.0);
+        doubles.add(4.0);
+        doubles.add(6.0);
 
         Set<Number> numbers = union(integers, doubles);
 

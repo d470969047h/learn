@@ -21,7 +21,7 @@ public class Card {
 
     public static void main(String[] args) {
         List<Card> deck = new ArrayList<>();
-        
+
         for (Iterator<Suit> i = suits.iterator(); i.hasNext(); )
             for (Iterator<Rank> j = ranks.iterator(); j.hasNext(); )
                 deck.add(new Card(i.next(), j.next()));

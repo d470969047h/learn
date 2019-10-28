@@ -33,7 +33,7 @@ public enum Phase {
                 () -> new EnumMap<>(Phase.class),
                 toMap(t -> t.to, t -> t,
                         (x, y) -> y, () -> new EnumMap<>(Phase.class))));
-        
+
         public static Transition from(Phase from, Phase to) {
             return m.get(from).get(to);
         }

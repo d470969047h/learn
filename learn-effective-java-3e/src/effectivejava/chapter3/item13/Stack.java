@@ -15,7 +15,7 @@ public class Stack implements Cloneable {
         ensureCapacity();
         elements[size++] = e;
     }
-    
+
     public Object pop() {
         if (size == 0)
             throw new EmptyStackException();
@@ -44,7 +44,7 @@ public class Stack implements Cloneable {
         if (elements.length == size)
             elements = Arrays.copyOf(elements, 2 * size + 1);
     }
-    
+
     // To see that clone works, call with several command line arguments
     public static void main(String[] args) {
         Stack stack = new Stack();

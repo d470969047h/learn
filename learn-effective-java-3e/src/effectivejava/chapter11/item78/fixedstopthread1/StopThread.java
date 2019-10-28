@@ -25,4 +25,4 @@ public class StopThread {
         TimeUnit.SECONDS.sleep(1);
         requestStop();
     }
-}  
+}
