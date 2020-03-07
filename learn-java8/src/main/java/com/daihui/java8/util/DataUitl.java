@@ -14,7 +14,7 @@ import java.util.List;
 public class DataUitl {
 
     /**
-     * 生成三个苹果
+     * 生成三个苹果数据
      * @return
      */
     public static List<Apple> createApples() {
