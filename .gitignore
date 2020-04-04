@@ -1,23 +1,17 @@
 # Created by .ignore support plugin (hsz.mobi)
 /.idea/
-/learn.iml
-/learn-rpc/learn-rpc.iml
-/learn-scala/learn-scala.iml
-/learn-springMongo/learn-springMongo.iml
-/learn-design-pattern/learn-design-pattern.iml
-/learn-design-pattern/target/
-/learn-vue/learn-vue.iml
-/learn-vue/webpack/demo01/node_modules/
-/learn-vue/webpack/demo02/node_modules/
-.gitignore
+*.iml
+*/target/
+*/node_modules/
+*/classes/
 .mvn/
 mvnw
 mvnw.cmd
-pom.xml
-/learn-rocketmq/learn-rocketmq.iml
 .DS_Store
-/learn-java8/learn-java8.iml
 
 learn_flutter/ios/Frameworks/
 learn_flutter/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
-/learn-exercises/learn-exercises.iml
+/.vscode/
+/learn-vue/webpack/demo01/node_modules/.cache/uglifyjs-webpack-plugin/
+/learn-vue/webpack/demo02/node_modules/
+/classes/production/learn-juc/
