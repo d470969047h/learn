@@ -13,6 +13,7 @@
         <module>learn-java8</module>
         <module>learn-exercises</module>
         <module>learn-widget</module>
+        <module>learn-juc</module>
 
         <!--<module>learn-rpc</module>-->
         <!--<module>learn-scala</module>-->

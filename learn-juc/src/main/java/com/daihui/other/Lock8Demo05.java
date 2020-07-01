@@ -1,4 +1,4 @@
-package com.daihui.juc;
+package com.daihui.other;
 
 
 import java.util.concurrent.TimeUnit;

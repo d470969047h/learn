@@ -1,4 +1,4 @@
-package com.daihui.juc;
+package com.daihui.other;
 
 
 import org.omg.CORBA.PUBLIC_MEMBER;
