@@ -3,7 +3,7 @@
 *.iml
 */target/
 */node_modules/
-*/classes/
+/classes/
 .mvn/
 mvnw
 mvnw.cmd
@@ -14,4 +14,3 @@ learn_flutter/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 /.vscode/
 /learn-vue/webpack/demo01/node_modules/.cache/uglifyjs-webpack-plugin/
 /learn-vue/webpack/demo02/node_modules/
-/classes/production/learn-juc/
